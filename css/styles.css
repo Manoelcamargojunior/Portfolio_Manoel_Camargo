@@ -1,0 +1,705 @@
+
+
+
+:root {
+    --bg-05:  #6d6a6a;
+    --bg-10: #fff;
+    --bg-20:#000;
+    --bg-30: #1f232b;  
+    --bg-40: #00ff08; 
+    --bg-50: #3f5efb;
+    --bg-60:linear-gradient(90deg, #00ff08 0%, #3f5efb 100%);
+    --bg-70: linear-gradient(90deg, #d53369 0%, #daae51 100% );
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg-30);
+    height: 100vh;
+    
+}
+
+h2.titulo span {
+    color: var(--bg-50);
+    
+ 
+}
+h2.titulo {
+    color: var(--bg-10);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+button:hover {
+    transform: scale(1.15);  
+    transition: all 0.6s;
+    box-shadow: 0px 0px 8px var(--bg-40);
+    
+  }
+
+  button a {
+    color: var(--bg-30);
+  }
+
+  .btn-button button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: none;
+    background: var(--bg-50);
+    margin: 15px 10px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+
+ /* Cabeçalho*/
+
+header {
+
+    padding: 40px  4%;
+    width: 100%;
+    background-color: var(--bg-30);
+    top: 0;
+    left: 0;
+    align-items: center;
+    z-index: 100;
+    
+   
+}
+
+
+
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header > .interface  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+.logo i {
+    border: 2px solid var(--bg-40);
+    padding: 20px 20px ;
+    border-radius: 50%;
+    font-size: 22px;
+    color: var(--bg-20);
+    background: var(--bg-60);
+    box-shadow: 0px 0px 8px var(--bg-05)
+}
+
+header  a {
+    color: var(--bg-20);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.6s;
+    
+}
+
+.menu_list a:hover {
+    color: #fff;
+    transform: scale(1.15);
+
+
+}
+
+header nav.menu ul {
+    list-style-type: none;
+}
+
+header nav.menu ul li {
+    display: inline-block;
+    padding: 0 30px;
+      
+    
+}
+
+.btn-contato button {
+    width: 240px;
+    height: 50px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background: var(--bg-50);
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+
+ 
+/*menu-mobile*/
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.btn-abrir-menu i{
+    color: var(--bg-40);
+    font-size: 40px;
+   
+}
+
+#btn-menu{
+    cursor: pointer;
+}
+
+.menu-mobile{
+    background-color: var(--bg-30);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+   overflow: hidden;
+    transition: .6s;
+    
+}
+
+.menu-mobile nav ul {
+        text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: var(--bg-10);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+
+
+}
+
+
+
+.menu-mobile nav ul li a:hover{
+    background-color:  var(--bg-50);
+    color: var(--bg-20);
+   
+   
+    
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+   
+    
+}
+
+.menu-mobile .btn-fechar i{
+    color: var(--bg-50);
+    font-size: 30px;
+  
+}
+
+
+
+.overlay-menu{
+    background-color: #00000094;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+
+}
+
+/*Conteudo principal*/
+
+section.conteudo_principal {
+    padding: 120px 4%;
+}
+
+ section.conteudo_principal .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+ .flex {
+display: flex;
+
+
+}
+
+.txt-conteudo h1{
+    color: var(--bg-10);
+    font-size: 2.7rem;
+       
+}
+
+.txt-conteudo h1  {
+    color: var(--bg-10);
+    font-size: 42px; 
+
+}
+
+.txt-conteudo h2 {
+    font-size: 42px;
+    color: var(--bg-50);
+    white-space: nowrap;
+    overflow: hidden;    
+    border-right: 2px solid var(--bg-10);
+   animation: cursor 500ms steps(40) infinite normal, type 4s steps(40) 2s normal ; 
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+    
+    to {
+        width: 15em;
+    }
+}
+
+
+@keyframes cursor {
+    from {
+        border-right-color:var(--bg-10); 
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+
+.txt-conteudo p {
+    color: var(--bg-10);
+    margin: 40px 0;
+    letter-spacing: 0.1rem;
+    font-size: 16px;
+    
+}
+.img-conteudo  img{
+    width: 350px;
+    height: 350px;
+    border: 2px solid var(--bg-40);
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px var(--bg-40);
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/*especialidades*/
+
+section.especialidades {
+    padding: 100px 4%;
+}
+
+section.especialidades .flex {
+    
+    gap: 40px;
+    
+}
+
+.especialidades .especialidades-box  {
+    color: var(--bg-10);
+    padding: 60px;
+    margin-top: 45px;
+    border-radius: 20px;
+    border: 2px solid  transparent;
+    cursor: pointer;
+    transition: 0.6s;
+     
+}
+
+.especialidades .especialidades-box:hover  {
+transform: scale(1.05);
+box-shadow: 0px 0px 12px  var(--bg-05);
+}
+
+
+
+.especialidades .especialidades-box i {
+    color: var(--bg-40);
+    font-size: 4rem;
+    
+}
+
+.especialidades .especialidades-box h3 {
+    
+    font-size: 1.7rem;
+    margin: 15px 0;
+    color: var(--bg-10);
+}
+
+.especialidades .especialidades-box p {
+    font-size: 16px;
+    color: var(--bg-10);
+    
+}
+
+/*sobre*/
+
+
+section.sobre {
+    padding: 120px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.img-sobre img {
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.sobre .txt-sobre h2 {
+    color: var(--bg-10);
+    font-size: 2.5rem;
+    margin-bottom:2.5rem;
+}
+
+.sobre .txt-sobre h2 span {
+    color: var(--bg-50);
+    display: block;
+}
+
+.txt-sobre P {
+    color: var(--bg-10);
+    margin-top: 2rem;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+
+}
+
+ 
+
+ /* portifolio*/
+
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+    
+}
+
+.portfolio .interface h2{
+    text-align: center;
+    font-size: 42px;
+    color: var(--bg-10);
+}
+
+ .interface h2 span{
+    color: var(--bg-50);
+}
+
+.img-port{
+    width: 360px;
+    height: 300px;
+    border-radius: 20px;
+    cursor: pointer; 
+    
+    
+}
+
+section.portfolio .flex{
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  
+}
+
+.img-port img {
+    width: 100%;
+    transition: 0.6s ease; 
+}
+
+
+.portfolio .img-port {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-05);
+    overflow: hidden;
+    display: flex;
+     
+}
+
+.img-port img:hover {
+    transform: scale(1.05);
+}
+
+.img-port .port-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    background: linear-gradient(transparent, var(--bg-05));
+    transform: translateY(30rem);
+    transition: 0.6s ease;
+  
+}
+
+.img-port:hover .port-layer{
+    transform: translateY(0);
+}
+
+
+.port-layer h3 {
+    font-size: 36px;
+    color: var(--bg-40);
+}
+
+.port-layer p{
+    font-size: 22px;
+    color: var(--bg-10);
+    line-height: 25px;
+    
+}
+
+.port-layer a i{
+    font-size: 30px;
+    color: var(--bg-40);
+}
+
+
+/*FALA COMIGO*/
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+form input, textarea {
+    width: 100%;
+    padding: 20px 15px;
+    background-color: #00000062;
+    color: var(--bg-10);
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+form  textarea {
+    resize: none;
+    height: 200px;
+}
+  
+form .btn-enviar {
+    margin: 20px;
+    text-align: center;
+    
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: var(--bg-50);
+    color: var(--bg-20);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .6s ease;
+
+}
+
+form .btn-enviar input:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem var(--bg-50);
+}
+
+
+
+/*rodape*/
+
+footer{
+    padding: 10px 4%;
+   
+   
+
+}
+.borda {
+   border-top: 2px solid var(--bg-50);
+
+}
+
+footer .flex {
+    justify-content: space-between;
+  
+}
+
+footer .line-footer {
+ padding: 40px 4%;
+ 
+}
+
+footer .line-footer p i {
+    color: var(--bg-50);
+    text-decoration: none;
+    font-size: 22px;
+    padding: 20px;
+}
+
+footer .line-footer p a {
+    text-decoration: none;
+    color: var(--bg-10);
+}
+
+/*responsivo*/
+
+@media screen and (max-width: 1020px) {
+    .menu_list, .btn-contato  {
+        display: none;
+
+    }
+
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    .txt-conteudo h1{
+        font-size: 22px;     
+    }
+
+    .txt-conteudo h2 {
+        font-size: 22px;
+    }
+
+    section.conteudo_principal {
+        padding: 30px 8% ;
+    }
+
+    .img-conteudo  img{
+        width: 95%;
+        
+    }
+    section.conteudo_principal .flex {
+        gap: 40px;
+    }
+
+    section.especialidades {
+        padding: 80px 8%;
+    }
+
+    h2.titulo {
+        font-size: 28px;
+    }
+    section.sobre {
+        padding: 80px 8%;
+    }
+    .sobre .txt-sobre h2 {
+        font-size: 26px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-button {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+        max-width: 350px;
+
+    }
+
+
+    footer .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        min-width: none;
+    }
+
+    section.portfolio{
+       padding: 80px 2%;
+    }
+    .portfolio .interface h2{
+        font-size: 30px;
+        text-align: center;
+      
+    }
+
+    .portfolio .flex{
+        justify-content: center;
+        align-items: center;
+        padding: 20px 4%;
+    }
+
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        height: 350px;
+        border-radius: 20px;
+        cursor: pointer; 
+               
+    }
+.img-port p{
+    line-height: 25px;
+}
+
+}
+    @media screen and (min-width: 1020px) {
+        .btn-abrir-menu i{
+            display: none;
+        }
+        
+    }
+
+
+    #btnTop  {
+        position: fixed;
+        right: 30px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        background-color: var(--bg-50);
+        cursor: pointer;
+        border: none;
+    }
+    
