@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
+   scroll-behavior: smooth;
 }
 
 body {
@@ -667,6 +668,7 @@ footer .line-footer p a {
         justify-content: center;
         align-items: center;
         padding: 20px 4%;
+        -webkit-flex-direction: row-reverse;
     }
 
     .img-port{
