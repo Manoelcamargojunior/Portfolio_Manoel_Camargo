@@ -74,12 +74,7 @@ header {
     left: 0;
     align-items: center;
     z-index: 100;
-    
-   
 }
-
-
-
 
 .interface {
     max-width: 1280px;
@@ -92,14 +87,22 @@ header > .interface  {
     justify-content: space-between;
  }
 
-.logo i {
+.logo {
     border: 2px solid var(--bg-40);
-    padding: 20px 20px ;
+    width: 90px;
+    height: 90px;
+   
+   
     border-radius: 50%;
-    font-size: 22px;
     color: var(--bg-20);
-    background: var(--bg-60);
+    background: var(--bg-50);
     box-shadow: 0px 0px 8px var(--bg-05)
+}
+
+.logo img{
+  max-width: 60px;
+ margin: 20px 15px 15px 15px;
+
 }
 
 header  a {
@@ -108,8 +111,7 @@ header  a {
     display: inline-block;
     font-size: 18px;
     font-weight: 600;
-    transition: all 0.6s;
-    
+    transition: all 0.6s; 
 }
 
 .menu_list a:hover {
@@ -418,6 +420,7 @@ section.portfolio {
     text-align: center;
     font-size: 42px;
     color: var(--bg-10);
+
 }
 
  .interface h2 span{
@@ -426,7 +429,7 @@ section.portfolio {
 
 .img-port{
     width: 360px;
-    height: 300px;
+    height: 360px;
     border-radius: 20px;
     cursor: pointer; 
     
@@ -471,26 +474,27 @@ section.portfolio .flex{
     flex-direction: column;
     text-align: center;
     padding: 0 4rem;
-    background: linear-gradient(transparent, var(--bg-05));
+    background: #3836369a;
     transform: translateY(30rem);
     transition: 0.6s ease;
-  
 }
 
 .img-port:hover .port-layer{
     transform: translateY(0);
 }
 
-
 .port-layer h3 {
-    font-size: 36px;
+    font-size: 32px;
     color: var(--bg-40);
+    line-height: 2rem;
 }
 
 .port-layer p{
     font-size: 22px;
     color: var(--bg-10);
     line-height: 25px;
+    width: 300px;
+    padding-top: 10px;
     
 }
 
@@ -673,15 +677,22 @@ footer .line-footer p a {
 
     .img-port{
         width: 100%;
-        max-width: 360px;
-        height: 350px;
+        
+        height: 360px;
         border-radius: 20px;
-        cursor: pointer; 
+       
                
     }
-.img-port p{
-    line-height: 25px;
+    .img-port p{
+       line-height: 22px;
+       padding: 0 30px;
+       font-size: 20px;
 }
+    
+    .img-port h3 {
+        font-size: 28px;
+
+    }
 
 }
     @media screen and (min-width: 1020px) {
